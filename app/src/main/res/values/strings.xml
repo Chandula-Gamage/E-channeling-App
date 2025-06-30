@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">24health</string>
+    <string name="HealSwift">HealSwift</string>
+    <string name="lab_test">LAB TEST</string>
+</resources>

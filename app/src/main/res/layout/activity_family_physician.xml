@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/doctorpagebackground"
+        tools:context=".FamilyPhysicianActivity">
+
+        <!-- Title: HealSwift -->
+        <TextView
+            android:id="@+id/textViewDoctorDetailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="HealSwift"
+            android:textColor="@color/color_primary_dark"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Doctor Title (Specialization) -->
+        <TextView
+            android:id="@+id/textViewDoctorDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Family Physician"
+            android:textColor="@color/color_primary_dark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDoctorDetailName" />
+
+        <!-- CardView for Doctor Details -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDoctorDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDoctorDetailTitle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Doctor's Image -->
+                <ImageView
+                    android:id="@+id/imgDoctor"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/doctorimage" />
+
+                <!-- Doctor Description -->
+                <TextView
+                    android:id="@+id/textViewDoctorDetailDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Dr. Michael Brown is a board-certified Family Physician specializing in preventive healthcare, treatment of chronic conditions, and wellness management. He emphasizes patient-centered care and strives to maintain long-term relationships with his patients."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Doctor Channel Price -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Consultation Fee Icon"
+                        android:src="@drawable/family_physicians" />
+
+                    <TextView
+                        android:id="@+id/textViewConsultationFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Consultation Fee: Rs.1000.00"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Book Appointment Button -->
+
+        <!-- Back Button -->
+
+        <Button
+            android:id="@+id/btn_book_appointment"
+            android:layout_width="170dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@color/purple_500"
+            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="Book Appointment"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewDoctorDetails" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="182dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingHorizontal="16dp"
+            android:text="Back"
+            android:textColor="@color/color_primary_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_book_appointment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

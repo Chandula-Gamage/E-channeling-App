@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/homeimage2"
+        tools:context=".ConfirmationActivity">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appointment Confirmation"
+            android:textColor="#1D1F1F"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Appointment Confirmation Title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- CardView for Appointment Summary -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#E6FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Doctor Details Section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor Details"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingVertical="8dp" />
+
+                <!-- Doctor Name -->
+                <TextView
+                    android:id="@+id/textViewDoctorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor Name:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Doctor Name" />
+
+                <!-- Doctor Specialization -->
+                <TextView
+                    android:id="@+id/textViewDoctorSpecialization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Specialization:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Doctor Specialization" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="#80FFFFFF" />
+
+                <!-- Patient Details Section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Details"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingVertical="8dp" />
+
+                <!-- Full Name -->
+                <TextView
+                    android:id="@+id/textViewFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Full Name" />
+
+                <!-- Contact Number -->
+                <TextView
+                    android:id="@+id/textViewContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Number:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Contact Number" />
+
+                <!-- Address -->
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Address" />
+
+                <!-- Email -->
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Email" />
+
+                <!-- Date -->
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Date" />
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:paddingVertical="4dp"
+                    android:contentDescription="Time" />
+
+                <!-- Consultation Fee -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Consultation Fee Icon"
+                        android:src="@android:drawable/star_big_on" />
+
+                    <TextView
+                        android:id="@+id/textViewConsultationFee"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:text="Consultation Fee: Rs.0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Edit Button -->
+        <Button
+            android:id="@+id/buttonEdit"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Edit"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/teal_700"
+            android:background="@drawable/rectangle_button"
+            android:paddingHorizontal="16dp"
+            android:contentDescription="Edit Appointment"
+            app:layout_constraintTop_toBottomOf="@id/cardViewDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonConfirm"
+            app:layout_constraintHorizontal_chainStyle="spread" />
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Confirm"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#161414"
+            android:background="@drawable/rectangle_button"
+            android:paddingHorizontal="16dp"
+            android:contentDescription="Confirm Appointment"
+            app:layout_constraintTop_toTopOf="@id/buttonEdit"
+            app:layout_constraintStart_toEndOf="@id/buttonEdit"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Back"
+            android:textColor="@android:color/black"
+            android:background="@drawable/button_rounded_outline"
+            android:paddingHorizontal="16dp"
+            android:contentDescription="Back to Previous Screen"
+            app:layout_constraintTop_toBottomOf="@id/buttonEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

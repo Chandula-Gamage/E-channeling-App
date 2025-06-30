@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homescreenwallpaper2"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".HomeActivity">
+
+    <!-- Title: 24*7 HEALTH CARE -->
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Healswift"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Scrollable View for Buttons -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Lab Test Button -->
+            <Button
+                android:id="@+id/btnLabTest"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#5785BA"
+                android:gravity="center"
+                android:text="Lab Test"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- Buy Medicine Button -->
+
+            <!-- Find Doctor Button -->
+
+            <Button
+                android:id="@+id/btnBuyMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#5785BA"
+                android:gravity="center"
+                android:text="Buy Medicine"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnFindDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#5785BA"
+                android:gravity="center"
+                android:text="Find Doctor"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- Health Articles Button -->
+            <Button
+                android:id="@+id/btnHealthArticles"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#5785BA"
+                android:gravity="center"
+                android:text="Health Articles"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- Order Details Button -->
+            <Button
+                android:id="@+id/btnOrderDetails"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#5785BA"
+                android:gravity="center"
+                android:text="Order Details"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- Log Out Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#5785BA"
+                android:gravity="center"
+                android:text="Log Out"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

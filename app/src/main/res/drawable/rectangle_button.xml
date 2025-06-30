@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Normal State -->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="@android:color/darker_gray"/>
+            <size android:height="60dp"/>
+            <padding android:left="12dp" android:top="12dp" android:right="12dp" android:bottom="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Pressed State (Ripple Effect) -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0"/> <!-- Light gray when pressed -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="@android:color/darker_gray"/>
+        </shape>
+    </item>
+
+    <!-- Disabled State -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#B0BEC5"/> <!-- Light Gray when disabled -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="@android:color/darker_gray"/>
+        </shape>
+    </item>
+
+</selector>
